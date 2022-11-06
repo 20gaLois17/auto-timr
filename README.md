@@ -3,7 +3,7 @@
 ## Note
 
 Please do not use this repo, as of now it is highly customised to my personal workflow and might not work for you.
-Also this script is a complete hack due to the fact that I intend to save time (and nerfes) for the matter. 
+Also this script is a complete hack due to the fact that I intend to save time (and nerves) for the matter. 
 
 ## But why? 
 Because I ...
