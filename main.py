@@ -34,7 +34,6 @@ def build_entry(line):
     entry["end"]   = dt.combine(d, dt.strptime(period[1], "%H:%M").time()).strftime("%Y-%m-%dT%H:%M:%S")+TZOFFSET
 
     if not tasks.get(chunks[1]):
-        failCount += 1
         print("ERR: could not match task for: ", chunks[1])
     # task id from dict
     entry["task.id"]  = tasks[chunks[1]]
