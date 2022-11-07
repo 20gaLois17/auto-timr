@@ -20,4 +20,5 @@ Because I ...
 
 ## Requirements
 - Python3 
+```pip install python-dotenv```
 
