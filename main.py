@@ -49,6 +49,30 @@ def build_entry(line):
 
     return entry
 
+def worktime_from_posts(posts):
+    # for a mock call
+    entry = {
+        "workingTimeType.id": "459229",
+        "description": "",
+        "startDate": "17.11.2022",
+        "startTime": "18:30",
+        "startTimeZone": TZOFFSET,
+        "start": "2022-11-17T18:30:00.000+01:00",
+        "startHalfDay": "false",
+        "endDate": "17.11.2022",
+        "endTime": "19:00",
+        "endTimeZone": TZOFFSET,
+        "end": "2022-11-17T19:00:00.000+01:00",
+        "endHalfDay": "false",
+        "breakTime": "0"
+    }
+    # use the first posts start time as start time for workday
+    # use the last posts end time as end time for workday
+    # calculate the total from start and end time
+    # calculate the net project time for the day
+    # breakTime is the delta between total and net project time
+    return entry
+
 config = build_config(
     [
         "remember-me-cookie",
@@ -57,7 +81,7 @@ config = build_config(
         "host-header",
         "xsrf-token-header",
         "origin-header"
-    ] 
+    ]
 )
 
 cookies= {
@@ -84,6 +108,7 @@ tasks = {
     "MUKU": "2159740",        # ->IT->Entwicklung
     "MURD": "2159826",        # ->IT->Entwicklung
     "MAS":  "2159804",        # ->IT->Entwicklung
+    "MAAG": "2865876",
 }
 
 billable = {                  # defaults to "true" if not set
@@ -91,6 +116,7 @@ billable = {                  # defaults to "true" if not set
     "MUKU": "true",
     "MURD": "true",
     "MAS":  "true",
+    "MAAG": "true",
 }
 
 
